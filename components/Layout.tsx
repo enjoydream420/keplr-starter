@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 import Head from 'next/head'
-import Nav from './Nav'
+import Header from './Header'
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
@@ -11,7 +11,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Nav />
+      <Header />
       <main className="flex flex-col items-center justify-center w-full flex-1 p-2 md:px-20 text-center">
         {children}
       </main>
