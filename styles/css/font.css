@@ -1,0 +1,102 @@
+.font-logo {
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+}
+
+.font-balance {
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+
+    letter-spacing: 0.02em;
+}
+
+.font-wallet {
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.font-section {
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.font-th {
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 22px;
+    /* identical to box height, or 183% */
+
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.font-td-1 {
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22px;
+    /* identical to box height, or 147% */
+
+    letter-spacing: 0.06em;
+}
+
+.font-td-badge {
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    /* identical to box height, or 160% */
+
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.font-td-2 {
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.font-td-3 {
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    /* identical to box height, or 147% */
+}
+
+.font-td-4 {
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height, or 150% */
+}
+
+.font-tab {
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+}

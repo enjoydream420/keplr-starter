@@ -5,6 +5,7 @@ import { useSigningClient } from 'contexts/cosmwasm'
 import { userTokenBalancesState } from '../data/store';
 import { bWYND, bLOOP, veSYNE } from '../data/constants';
 import { getReadableBalance } from '../data/utils';
+import Pool from '../components/Pool';
 
 const Home: NextPage = () => {
   const { walletAddress } = useSigningClient()
@@ -15,10 +16,16 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <div className="flex justify-between w-full">
+      {/* <div className="flex justify-between w-full">
         <p>bWYND</p>
         <p>{getReadableBalance(bWYND_balance[0].balance, bWYND_balance[0].decimals)}</p>
-        <button>Convert</button>
+        <label
+          htmlFor="convert-modal"
+          className="btn"
+          // onClick={() => }
+        >
+          Convert
+        </label>
       </div>
       <div className="flex justify-between w-full">
         <p>bLOOP</p>
@@ -30,6 +37,14 @@ const Home: NextPage = () => {
         <p>{getReadableBalance(veSYNE_balance[0].balance, veSYNE_balance[0].decimals)}</p>
         <button>Convert</button>
       </div>
+      <input type="checkbox" id="convert-modal" className="modal-toggle" />
+      <label htmlFor="convert-modal" className="modal cursor-pointer">
+        <label className="modal-box relative" htmlFor="">
+          <h3 className="text-lg font-bold">Congratulations random Internet user!</h3>
+          <p className="py-4">free!</p>
+        </label>
+      </label> */}
+      <Pool />
     </>
   )
 }

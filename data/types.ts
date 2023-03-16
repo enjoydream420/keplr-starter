@@ -16,3 +16,13 @@ export interface UserCoinBalance {
     denom: string,
     amount: Uint128
 }
+export interface TokenPrice {
+    address: string,
+    price: string
+}
+
+export interface TokenPrices {
+    syne: TokenPrice,
+    wynd: TokenPrice,
+    loop: TokenPrice
+}

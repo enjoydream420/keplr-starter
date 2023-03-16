@@ -1,0 +1,74 @@
+.primary-bg-color {
+    background: #16162C;
+}
+.header-bg-color {
+    background: linear-gradient(180deg, #16162C 0%, rgba(22, 22, 44, 0.81) 100%);
+}
+.secondary-bg-color {
+    background: linear-gradient(180deg, #212340 0%, #16172C 100%);
+}
+.secondary-bg-color:hover, .secondary-bg-color:focus, .secondary-bg-color:active {
+    background: #252747;
+    box-shadow: inset 0px 0px 12px rgba(255, 255, 255, 0.05);
+}
+.search-bg-color {
+    background: #252747;
+}
+.balance-bg-color {
+    background: #252747;
+}
+.btn-bg-color:hover {
+    background: transparent;
+}
+.tab-bg-color {
+    background: #1C88F2;
+    box-shadow: 0px 0px 60px #111122, -16px -12px 60px #111122, 16px 12px 60px #111122;
+}
+.detail-bg-color-1 {
+    background: #1B1D37;
+}
+.detail-bg-color-2 {
+    background: #2E3156;
+    box-shadow: inset 0px 0px 12px rgba(255, 255, 255, 0.05);
+}
+.detail-bg-color-3 {
+    background: #2E3156;
+    box-shadow: inset 0px 0px 12px rgba(255, 255, 255, 0.05);
+}
+.detail-btn-bg-color-1 {
+    background: #8B91F9;
+}
+.detail-btn-bg-color-2 {
+    background: rgba(28, 136, 242, 0.1);
+}
+.detail-btn-bg-color-3 {
+    background: #1C88F2;
+}
+.badge-bg-color {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.primary-color {
+    color: #FFFFFF;
+}
+.secondary-color {
+    color: #7577A2;
+}
+.tertiary-color {
+    color: #9496B7;
+}
+.fourth-color {
+    color: #8B91F9;
+}
+.badge-color-1 {
+    color: #8AE5B4;
+}
+.badge-color-2 {
+    color: #E7C48F;
+}
+.apy-color-1 {
+    color: #8AE5B4;
+}
+.apy-color-2 {
+    color: #F5919E;
+}

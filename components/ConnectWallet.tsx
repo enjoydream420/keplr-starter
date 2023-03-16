@@ -2,41 +2,42 @@ import { useSetRecoilState } from 'recoil';
 
 import { useSigningClient } from 'contexts/cosmwasm'
 import WalletIcon from './images/WalletIcon'
-import ReloadIcon from './images/ReloadIcon'
-import WalletBalances from './WalletBalances'
 import { userTokenBalancesReloadState } from '../data/store';
+import { reducedWalletAddress } from '../data/utils';
 
 const ConnectWallet = () => {
-    const { walletAddress, connectWallet, disconnect } = useSigningClient()
+    const { walletAddress, connectWallet, disconnect, loading } = useSigningClient()
     const setReload = useSetRecoilState(userTokenBalancesReloadState)
     const reloadBalance = () => {
         setReload(true)
     }
 
     return (
-        <div className="flex flex-grow lg:flex-grow-0 max-w-full">
+        <div className="flex max-w-full">
             {
                 walletAddress ?
-                    <div className="flex items-center justify-center">
-                        <WalletBalances />
-                        <button
-                            onClick={reloadBalance}
-                        >
-                            <ReloadIcon />
-                        </button>
-                        <button
-                            onClick={() => disconnect()}
-                            className="ml-3 md:ml-5"
-                        >
-                            <WalletIcon />
-                        </button>
-                    </div> :
                     <button
-                        className="block btn btn-outline btn-primary w-full max-w-full truncate"
-                        onClick={connectWallet}
+                        onClick={() => disconnect()}
+                        className="btn btn-border disabled font-wallet rounded-full"
                     >
-                        Connect Wallet
-                    </button>
+                        <WalletIcon />
+                        <span className='ml-2'>{reducedWalletAddress(walletAddress)}</span>
+                    </button> : (
+                loading ? 
+                <button
+                    className="btn btn-border disabled font-wallet rounded-full"
+                    onClick={connectWallet}
+                >
+                    Connecting...
+                </button> : 
+                <button
+                    className="btn btn-border font-wallet capitalize rounded-full"
+                    onClick={connectWallet}
+                >
+                    <WalletIcon />
+                    <span className='ml-2'>Connect</span>
+                </button>
+                )
             }
         </div>
     )

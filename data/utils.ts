@@ -11,3 +11,8 @@ export const getReadableBalance = (balance: Uint128, decimals: number): string =
     }
     return ""
 }
+
+export const reducedWalletAddress = (address: string) => {
+    if (address) return `${address.slice(0, 8)}...${address.slice(address.length - 4)}`
+    else return ""
+}
