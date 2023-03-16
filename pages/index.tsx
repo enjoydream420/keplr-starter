@@ -1,35 +1,36 @@
 import type { NextPage } from 'next'
-import Link from 'next/link'
-import WalletLoader from 'components/WalletLoader'
+import { useRecoilValue } from 'recoil';
+
 import { useSigningClient } from 'contexts/cosmwasm'
+import { userTokenBalancesState } from '../data/store';
+import { bWYND, bLOOP, veSYNE } from '../data/constants';
+import { getReadableBalance } from '../data/utils';
 
 const Home: NextPage = () => {
   const { walletAddress } = useSigningClient()
+  const userTokenBalances = useRecoilValue(userTokenBalancesState)
+  const bWYND_balance = userTokenBalances.filter(each => each.address === bWYND.address)
+  const bLOOP_balance = userTokenBalances.filter(each => each.address === bLOOP.address)
+  const veSYNE_balance = userTokenBalances.filter(each => each.address === veSYNE.address)
 
   return (
-    <WalletLoader>
-      <h1 className="text-6xl font-bold">
-        Welcome to {process.env.NEXT_PUBLIC_CHAIN_NAME} !
-      </h1>
-
-      <div className="mt-3 text-2xl">
-        Your wallet address is:{' '}
-        <pre className="font-mono break-all whitespace-pre-wrap">
-          {walletAddress}
-        </pre>
+    <>
+      <div className="flex justify-between w-full">
+        <p>bWYND</p>
+        <p>{getReadableBalance(bWYND_balance[0].balance, bWYND_balance[0].decimals)}</p>
+        <button>Convert</button>
       </div>
-
-      <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 max-w-full sm:w-full">
-        <Link href="/send" passHref>
-          <a className="p-6 mt-6 text-left border border-secondary hover:border-primary w-96 rounded-xl hover:text-primary focus:text-primary-focus">
-            <h3 className="text-2xl font-bold">Send to wallet &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Execute a trasaction to send funds to a wallet address.
-            </p>
-          </a>
-        </Link>
+      <div className="flex justify-between w-full">
+        <p>bLOOP</p>
+        <p>{getReadableBalance(bLOOP_balance[0].balance, bLOOP_balance[0].decimals)}</p>
+        <button>Convert</button>
       </div>
-    </WalletLoader>
+      <div className="flex justify-between w-full">
+        <p>veSYNE</p>
+        <p>{getReadableBalance(veSYNE_balance[0].balance, veSYNE_balance[0].decimals)}</p>
+        <button>Convert</button>
+      </div>
+    </>
   )
 }
 

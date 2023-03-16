@@ -8,12 +8,14 @@ const Menubar = () => {
         <div className="flex items-center justify-center">
             <Link href="/">
                 {PUBLIC_SITE_ICON_URL.length > 0 ? (
-                    <Image
-                        src={PUBLIC_SITE_ICON_URL}
-                        height={32}
-                        width={32}
-                        alt="Logo"
-                    />
+                    <a>
+                        <Image
+                            src={PUBLIC_SITE_ICON_URL}
+                            height={32}
+                            width={32}
+                            alt="Logo"
+                        />
+                    </a>
                 ) : (
                     <span className="text-2xl">⚛️ </span>
                 )}

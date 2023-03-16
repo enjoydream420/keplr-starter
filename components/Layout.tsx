@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
 import Head from 'next/head'
+
 import Header from './Header'
 
 export default function Layout({ children }: { children: ReactNode }) {

@@ -4,14 +4,13 @@ import { StdFee, Coin } from '@cosmjs/amino'
 
 import WalletLoader from 'components/WalletLoader'
 import { useSigningClient } from 'contexts/cosmwasm'
+import { PUBLIC_CHAIN_NAME, PUBLIC_STAKING_DENOM } from '../data/constants';
 import {
   convertMicroDenomToDenom,
   convertFromMicroDenom,
   convertDenomToMicroDenom,
 } from 'util/conversion'
 
-const PUBLIC_CHAIN_NAME = process.env.NEXT_PUBLIC_CHAIN_NAME
-const PUBLIC_STAKING_DENOM = process.env.NEXT_PUBLIC_STAKING_DENOM || 'ujuno'
 
 const Send: NextPage = () => {
   const { walletAddress, signingClient } = useSigningClient()
