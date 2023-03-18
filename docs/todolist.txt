@@ -1,0 +1,19 @@
+1. bWYND contract
+    - contract.rs
+        CONTRACT_NAME 28
+        CONTRACT_VERSION 29
+        LOGO_SIZE_CAP 31
+
+        instantiate
+            name
+            symbol
+            decimals
+            initial_balances []
+            mint?
+                minter SYNERGISTIC contract
+                cap? it not set, unlimited mint
+            marketing?
+                project?
+                description?
+                marketing?
+                logo?

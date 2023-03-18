@@ -6,6 +6,7 @@ import { userTokenBalancesState } from '../data/store';
 import { bWYND, bLOOP, veSYNE } from '../data/constants';
 import { getReadableBalance } from '../data/utils';
 import Pool from '../components/Pool';
+import PoolDetail from '../components/PoolDetail';
 
 const Home: NextPage = () => {
   const { walletAddress } = useSigningClient()
@@ -44,7 +45,12 @@ const Home: NextPage = () => {
           <p className="py-4">free!</p>
         </label>
       </label> */}
-      <Pool />
+      <div data-accordion="collapse">
+        <Pool id={"0"} />
+        <PoolDetail id={"0"} />
+        <Pool id={"1"} />
+        <PoolDetail id={"1"} />
+      </div>
     </>
   )
 }

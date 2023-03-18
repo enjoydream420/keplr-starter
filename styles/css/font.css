@@ -92,6 +92,13 @@
     line-height: 18px;
     /* identical to box height, or 150% */
 }
+.font-td-5 {
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 18px;
+}
 
 .font-tab {
     font-family: 'Hanken Grotesk';

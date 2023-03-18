@@ -1,0 +1,4 @@
+cw20_token.wasm
+	codeId	582
+synergistic.wasm(incomplete)
+	codeId 583

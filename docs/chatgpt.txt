@@ -1,0 +1,58 @@
+// To deploy a CosmWasm contract to the Juno chain, you can follow these general steps:
+
+Set up your development environment: You will need to install the Juno SDK, the CosmWasm CLI, and any other dependencies required for your specific project.
+
+Write your smart contract: Write your CosmWasm smart contract code in Rust using the CosmWasm framework. You can find documentation and examples on the CosmWasm website.
+
+Compile your smart contract: Use the CosmWasm CLI to compile your smart contract code into a WebAssembly binary. You will need to specify the target platform as cosmwasm-unknown-unknown.
+
+Create an account on the Juno chain: You will need to create an account on the Juno chain and obtain some Juno tokens to pay for gas fees when deploying your contract.
+
+Deploy your smart contract: Use the Juno SDK CLI to deploy your compiled WebAssembly binary to the Juno chain. You will need to specify the path to your binary file, the name of your contract, and any other relevant parameters.
+
+Here is an example command to deploy a CosmWasm contract to the Juno chain:
+
+scss
+Copy code
+juno tx wasm store <path_to_binary> --from <key_name> --gas auto --gas-adjustment 1.4 --gas-prices 0.025ujuno --chain-id <chain_id> --node <node_url> --broadcast-mode block
+In this command, you will need to replace the following parameters:
+
+<path_to_binary>: The path to your compiled WebAssembly binary file.
+<key_name>: The name of the Juno key that you want to use to sign the transaction.
+<chain_id>: The ID of the Juno chain that you want to deploy your contract to.
+<node_url>: The URL of the Juno node that you want to use to broadcast the transaction.
+Once the transaction is confirmed on the Juno chain, your CosmWasm contract will be deployed and ready to use. You can interact with your contract using the Juno SDK CLI or other tools that support the Juno chain.
+
+
+
+// To add the Juno testnet to Keplr, you can follow these steps:
+
+Open Keplr wallet extension in your browser and unlock it with your password.
+
+Click on the "Networks" icon located on the bottom left corner of the Keplr wallet window.
+
+Click on the "Add" button on the top right corner of the Networks window.
+
+In the "Network Name" field, type in "Juno Testnet".
+
+In the "Chain ID" field, enter "7" (Juno's testnet chain ID).
+
+In the "LCD" field, enter "https://lcd.juno.giansalex.dev" (Juno's testnet endpoint).
+
+In the "Keplr Chain Info" field, enter the following JSON code:
+
+json
+Copy code
+{
+  "chain-id": "7",
+  "chain-name": "Juno Testnet",
+  "rpc": "https://rpc.juno.giansalex.dev",
+  "rpc-querier": "https://rpc-querier.juno.giansalex.dev",
+  "rest": "https://lcd.juno.giansalex.dev",
+  "explorer": "https://juno.codetract.io"
+}
+Click on the "Save" button on the bottom right corner of the Networks window.
+
+The Juno Testnet should now be added to Keplr, and you can select it by clicking on the "Networks" icon and choosing "Juno Testnet" from the list.
+
+You can now use Keplr to interact with Juno's testnet, including sending and receiving transactions, staking, and more.

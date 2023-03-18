@@ -1,0 +1,26 @@
+We'll get wireframes soon but it's super simple. Most is the current voting UI of wynd that needs to be forked
+
+2. I’m not exactly sure what is the best of code we could use/fork from another protocol… my thing is this: it’s pretty straight forward. Using WYND ask an example. We need a lock function.that when someone locks 1 WYND token to the contract, 1 bWYND token is minted & distributed to the users wallet. User can unlock later.
+
+Contract will automatically take 10% of the WYND & deposit it into our protocol/revenue wallet. The remaining 90% of the WYND that was deposited into our contract is immediately staked in the WYND governance for the maximum lock time. When this happens, we should automatically claim the pending WYND staking rewards & distribute 90% of them to the bWYND/WYND farming contract & 10% to our protocol/revenue wallet.
+
+The wallet that is used to stake the WYND deposited into our protocol NEEDS to have the ability to do everything a normal wallet can do. This is because it will be the main holder of all the WYND tokens & voting power, so we will need to use it to vote. When Wynd eventually launches farms that are rewarded based on the amount of Wynd voting power someone has, we will need to launch V2 of the protocol. V2 will allow users to deposit their WYND liquidity tokens into our protocol instead, where they will receive the normal Wynd rewards minus 10-20% performance fee, but will be incentivized with our governance token & they will also receive the highest APR offer because the liquidity pools we offer will be held by the wallet with all of our staked Wynd. Which means literally every farm will have the highest possible APR
+
+Additional features list we will need for V1…
+
+We will need governance for our token (literally just fork WYND).
+
+We will need gauges. These gauges will be the EXACT same as WYND’s gauges. The reasoning behind this is that when our users are voting on our gauges, they will be voting for where to distribute OUR WYND voting power.
+
+So let’s say CZAR holds 2% of our total supply. They vote on the CZAR/USDC gauge on our protocol. That means 2% of all WYND voting power we hold, will be used to vote for the CZAR/USDC farm on WYND’s gauge.
+
+Just like convex
+
+
+url
+https://github.com/cosmorama
+https://resources.curve.fi/reward-gauges/gauge-weights
+https://app.wynddao.com/vote
+https://www.wynddao.com/
+
+https://docs.google.com/document/d/1rp02ZmS5JENXtyFbIlNYL4rzaJ33W5BLKSonkcb7AX0/edit#
